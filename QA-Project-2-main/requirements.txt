@@ -1,0 +1,14 @@
+Flask
+# Flask-SQLAlchemy
+Jinja2
+# SQLAlchemy
+Werkzeug
+flask_wtf
+pytest
+pytest-cov
+flask-testing
+# pymysql
+wtforms
+# selenium
+requests
+requests_mock

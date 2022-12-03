@@ -1,0 +1,38 @@
+---
+# tasks file for installing-docker
+- name: "Installing docker"
+  apt:
+    update_cache: true
+    pkg:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg
+    - lsb-release
+    - python3
+    - python3-pip
+- name: "adding key"
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+- name: "adding repo"
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu bionic stable
+    state: present
+- name: "Install-docker"
+  apt:
+    pkg:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+- name: "adding jenkins"
+  user:
+    name: jenkins
+    groups: docker
+    append: yes
+- name: "Install pip"
+  pip:
+    name:
+      - docker
+      - jsondiff
+    executable: pip3

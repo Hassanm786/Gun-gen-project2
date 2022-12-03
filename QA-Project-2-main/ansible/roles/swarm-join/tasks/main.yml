@@ -1,0 +1,23 @@
+---
+# tasks file for swarm-join
+
+# - name: "swarm"
+#   docker_swarm:
+#     state: present
+
+# - name: "swarm info"
+#   docker_swarm_info:
+#   register: info
+
+# - name: "Deploy app"
+#   docker_stack:
+#     state: present
+#     name: gun_generator
+#     compose:
+#       - /home/jenkins/docker-compose.yaml
+- name: "adding working to swarm"
+  docker_swarm:
+    state: join
+    advertise_addr: swarm-worker
+    join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'swarm-manager:2377' ]

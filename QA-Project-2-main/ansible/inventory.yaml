@@ -1,0 +1,14 @@
+all:
+  children:
+    swarm_managers:
+      hosts:
+        swarm-manager:
+    swarm_workers:
+      hosts:
+        swarm-worker:
+        
+  vars:
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: '~/.ssh/ansible'
+    ansible_python_interpreter: "/usr/bin/python3"
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
