@@ -15,9 +15,6 @@ To create a application with four services that work together. Service 1 will re
 ### Trello Board
 When Creating this application i used trello to track and keep of the progress of my work, the reason i used trello is because the service is very good at storing documentation and keeping track of what needs to be done next.
 ![trello board](https://user-images.githubusercontent.com/101265381/168577011-e9d2b066-9116-45eb-8f4f-68a13368c578.png)
-### Risk Assessment
-When planning this project a risk assesment was created to identify all potential problems associated as shown in the below image:
-![risk-assessment](https://user-images.githubusercontent.com/101265381/168581340-53c8cac7-a992-4620-9406-181625a6e191.png)
 ### Project Diagram
 in the diagram below it shows what is expected and how the application will work once the user interacts with the front end.
 
